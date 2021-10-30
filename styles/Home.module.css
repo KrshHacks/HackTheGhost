@@ -1,0 +1,132 @@
+.main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background-color: #24242e;
+  color: #fff;
+  overflow-y: hidden;
+}
+
+.container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  padding: 2rem 4rem;
+  background: #3c3c4d;
+  border-radius: 0.2rem;
+  margin: 2rem 6rem;
+  max-width: 90vw;
+}
+
+.questionBox {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-between;
+  padding: 2rem 4rem;
+  background: #24242e;
+  border-radius: 0.2rem;
+  margin: 1rem 3rem;
+  overflow: hidden;
+  position: relative;
+}
+
+.ghost {
+  animation: float 3s ease-out infinite;
+}
+
+@keyframes float {
+  50% {
+    transform: translate(0, 20px);
+  }
+}
+
+.lives {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  padding: 2rem 4rem;
+  margin: 1rem 3rem;
+  position: absolute;
+  top: 1rem;
+  right: 2rem;
+}
+
+.life {
+  width: 2rem;
+  height: 2rem;
+  content: url("https://www.svgrepo.com/show/8408/broken-heart.svg");
+  filter: grayscale(1);
+  margin: 0 0.5rem;
+}
+
+.filled {
+  content: url("https://www.svgrepo.com/show/30066/heart.svg");
+  filter: grayscale(0);
+}
+
+.question {
+  font-weight: 400;
+  font-size: 2rem;
+  margin-top: 8rem;
+}
+
+.options {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+
+.answer {
+  font-weight: 400;
+  font-size: 1.25rem;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem 2rem;
+  background: #3c3c4d;
+  border-radius: 0.25rem;
+  min-width: 20rem;
+  margin: 2rem;
+  cursor: pointer;
+}
+
+.questionBoxMain {
+  z-index: 1000;
+}
+
+.questionBoxMain.hide {
+  transform: translateY(-100vh);
+  z-index: -2;
+  pointer-events: none;
+}
+
+.messageBox {
+  transform: translateY(-17.5vh);
+  z-index: 1;
+}
+
+.messageBox .hide {
+  transform: translateY(100vh);
+  pointer-events: none;
+}
+
+.message {
+  font-size: 1.5rem;
+}
+
+.reset {
+  cursor: pointer;
+  padding: 1rem 2rem;
+  border-radius: 0.25rem;
+  background: #3c3c4d;
+  font: inherit;
+  border: 0;
+  color: #fff;
+}
