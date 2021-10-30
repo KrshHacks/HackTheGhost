@@ -205,6 +205,7 @@ const Home: NextPage = () => {
             <div className={styles.options}>
               {questions[currentQuestion].answers.map((answer, index) => (
                 <div
+                  key={index}
                   className={styles.answer}
                   onClick={() =>
                     handleAnswer(questions[currentQuestion], index)
