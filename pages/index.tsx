@@ -235,7 +235,7 @@ const Home: NextPage = () => {
                 setResetButton(false);
               }}
             >
-              Let's restart!
+              Let&#39;s restart!
             </button>
           </div>
         </div>
